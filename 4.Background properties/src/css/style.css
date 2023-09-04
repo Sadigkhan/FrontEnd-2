@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.first {
+    width: 100%;
+    padding: 16rem;
+    background-image: url("../img/bg-masthead.jpg");
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.first h1 {
+    font-size: 88px;
+    color: #212529;
+}
+
+.first h3 {
+    margin-bottom: 48px;
+}
+
+.first h3 em {
+    color: #212529;
+    font-size: 28px;
+}
+
+.first a {
+    color: #fff;
+    background-color: #1D809F;
+    transition: 0.3s;
+}
+
+.first a:hover {
+    color: #fff;
+    background-color: #196d87;
+}
+
+.second {
+    width: 100%;
+    padding: 8rem;
+    text-align: center;
+}
+
+.second h2 {
+    font-size: 32px;
+    color: #212529;
+    margin-bottom: 18px;
+}
+
+.second p {
+    font-size: 20px;
+    color: #212529;
+    margin-bottom: 48px;
+    font-weight: 300;
+}
+
+.second p a {
+    color: #1D809F;
+}
+
+
+.btn {
+    padding: 20px 40px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.offerbtn {
+    color: white;
+    background-color: #212529;
+    transition: 0.3s;
+}
+
+.offerbtn:hover {
+    color: white;
+    background-color: #424649;
+}
+
+.third {
+    width: 100%;
+    padding: 8rem;
+    text-align: center;
+    background-color: #196d87;
+}
+
+.third h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+    color: #fff;
+}
+
+.btnblack {
+    background-color: #212529;
+    transition: 0.3s;
+    color: white;
+    margin-left: 10px;
+}
+
+.btnblack:hover {
+    background-color: #424649;
+}
+
+.btnwhite {
+    background-color: #fff;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.btnwhite:hover {
+    background-color: #d3d4d5;
+}

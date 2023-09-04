@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .text{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    overflow-y: scroll;
+} */
+
+/* 
+
+.first{
+    width: 500px;
+    padding: 20px;
+    background-color: red;
+    border: 10px solid;
+    margin-bottom: 10px;
+}
+
+
+.second{
+    width: 500px;
+    padding: 20px;
+    background-color: yellow;
+    border: 10px solid;
+    box-sizing: border-box;
+} */
+
+
+.header-all{
+    background-color: aquamarine;
+    padding: 40px;
+    overflow-y: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+.logo{
+    float: left;
+}
+
+.navbar{
+    float: right;
+}
+.navbar a{
+    margin-left: 15px;
+}
+.card{
+width: 30%;
+float: left;
+margin:15px 0 0 38px ;
+}
+
+.card img{
+    width: 100%;
+    /* filter: grayscale(1); */
+    transition: 0.7s;
+    /* filter: blur(5px); */
+    /* filter: contrast(0.5); */
+ /* filter: hue-rotate(360deg); */
+ /* filter: invert(1); */
+ /* filter: saturate(0.5); */
+ /* filter: sepia(1); */
+}
+
+.card:hover img{
+    /* filter: grayscale(0); */
+    /* filter: blur(0px); */
+
+}
+
+/* .img1{
+    float: left;
+}
+.img2{
+    float: left;
+} */

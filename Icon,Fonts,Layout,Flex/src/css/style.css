@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 
+i{
+    font-size: 40px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+svg{
+    font-size: 40px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 5px;
+    fill: white;
+} */
+
+/*
+camelCase
+PascalCase
+kebab-case
+snake_case
+UPPERCASE
+lowercase
+*/
+
+
+
+@font-face {
+    font-family: Simon;
+    src: url(../fonts/Rubik-ExtraBold.ttf);
+}
+@font-face {
+    font-family: Rubic ;
+    src: url();
+}
+
+
+
+#Vip-offers{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+
+.prod-card{
+    width: 22%;
+    border: 1px solid ;
+    margin-bottom: 30px;
+}
+
+.prod-card .prod-image img{
+    width: 100%;
+}
+
+
