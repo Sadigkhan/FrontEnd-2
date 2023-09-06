@@ -1,0 +1,89 @@
+// .first{
+//     width: 600px;
+//     height: 600px;
+//     background-color: red;
+
+//     .second{
+//         width: 300px;
+//         height: 300px;
+//         background-color: blue;
+//         transition: width 7s ease-in;
+//     }
+
+//     &:hover{
+//         .second{
+//             width: 900px;
+//         }
+//     }
+// }
+
+
+// .box{
+//     margin:  auto;
+//     width: 30%;
+//     overflow: hidden;
+//     img{
+//         width: 100%;
+//         transition: 3s;
+//     }
+//     &:hover{
+//         img{
+//             transform: rotateX(360deg) rotateY(360deg);
+//         }
+//     }
+// }
+
+
+// .X {
+//     width: 600px;
+//     height: 600px;
+//     border-radius: 50%;
+//     border: 10px dashed red;
+//     // display: flex;
+//     // justify-content: center;
+//     // align-items: center;
+//     position: relative;
+//     animation: outerCircle 5s linear infinite;
+
+//     .Y {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         border-radius: 50%;
+//         width: 300px;
+//         height: 300px;
+//         border: 10px dashed black;
+//         animation: innerCircle 5s linear infinite;
+
+//     }
+// }
+
+// @keyframes outerCircle {
+//     from {
+//         transform: rotate(0deg);
+//     }
+//     to {
+//         transform: rotate(360deg);
+//     }
+// }
+
+// @keyframes innerCircle {
+//     0% {
+//         transform: rotate(0deg);
+//     }
+//     100% {
+//         transform: rotate(-360deg);
+//     }
+// }
+
+
+header{
+    ul{
+        justify-content: space-between;
+    }
+}
+
+.box{
+    margin-bottom: 10px;
+}
