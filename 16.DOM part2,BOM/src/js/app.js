@@ -1,41 +1,41 @@
-// let menu_btn = document.querySelector("#Header .container .all .right .menu-mobile-btn");
+let menu_btn = document.querySelector("#Header .container .all .right .menu-mobile-btn");
 
-// let menu_dropdown = document.querySelector("#Header .container .all .dropdown");
+let menu_dropdown = document.querySelector("#Header .container .all .dropdown");
+
+menu_btn.addEventListener("click", function() {
+    menu_dropdown.classList.toggle("active");
+})
 
 // menu_btn.addEventListener("click", function() {
-//     menu_dropdown.classList.toggle("active");
+//     if(menu_dropdown.classList.contains("active")){
+//         menu_dropdown.classList.remove("active");
+//     }else{
+//         menu_dropdown.classList.add("active");
+//     }
 // })
 
-// // menu_btn.addEventListener("click", function() {
-// //     if(menu_dropdown.classList.contains("active")){
-// //         menu_dropdown.classList.remove("active");
-// //     }else{
-// //         menu_dropdown.classList.add("active");
-// //     }
-// // })
+let dropdown_items = document.querySelectorAll(".dropdown-item");
 
-// let dropdown_items = document.querySelectorAll(".dropdown-item");
+dropdown_items.forEach(element => {
+    element.addEventListener("click", function(){
 
-// dropdown_items.forEach(element => {
-//     element.addEventListener("click", function(){
+        let temp_active = document.querySelector(".dropdown-item .active")
 
-//         let temp_active = document.querySelector(".dropdown-item .active")
-
-//         if(temp_active !== null){
-//             temp_active.classList.remove("active")
-//             temp_active.previousElementSibling.querySelector("i").classList.toggle("open")
-//             if(temp_active != element.querySelector(".inner-dropdown")){
-//                 element.querySelector(".dropdown-all i").classList.toggle("open")
-//                 element.querySelector(".inner-dropdown").classList.toggle("active")
-//             }
-//         }else{
-//             element.querySelector(".dropdown-all i").classList.toggle("open")
-//             element.querySelector(".inner-dropdown").classList.toggle("active")
-//         }
+        if(temp_active !== null){
+            temp_active.classList.remove("active")
+            temp_active.previousElementSibling.querySelector("i").classList.toggle("open")
+            if(temp_active != element.querySelector(".inner-dropdown")){
+                element.querySelector(".dropdown-all i").classList.toggle("open")
+                element.querySelector(".inner-dropdown").classList.toggle("active")
+            }
+        }else{
+            element.querySelector(".dropdown-all i").classList.toggle("open")
+            element.querySelector(".inner-dropdown").classList.toggle("active")
+        }
 
         
-//     })
-// })
+    })
+})
 
 
 // let first=document.getElementById("first")
@@ -67,6 +67,6 @@
 //     clearInterval(startInterval)
 // }
 
-// // btn.addEventListener("click",StopInterval)
+// btn.addEventListener("click",StopInterval)
 
 // setTimeout(StopInterval,10000)
