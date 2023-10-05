@@ -1,77 +1,170 @@
 //DRY - Don't Repeat Yourself
-// function getDetails(name,age,city){
-//     console.log(`Name: ${name} Age: ${age} City: ${city}`)
-// }
-
+//Call, Apply, Bind
 
 // let human={
-//     getDetails:function(adress,phoneNumber,surname){
-//         console.log(`Name: ${this.name} Age: ${this.age} City: ${this.city} Adress:${adress} PhoneNumber:${phoneNumber} Surname:${surname}`)
+//     getDetails:function(adress,phoneNumber){
+//         console.log(`Name: ${this.name}, Age: ${this.age}, City: ${this.city}, Adress:${adress}, PhoneNumber: ${phoneNumber}`)
 //     }
 // }
 
-// let person={
-//     name:"John",
-//     age:30,
-//     city:"New York",
-   
-// }
+
+
 // let person1={
-//     name:"Mary",
+//     name:'John',
 //     age:30,
-//     city:"New York",
-//     getDetails:function(){
-//         console.log(`Name: ${this.name} Age: ${this.age} City: ${this.city}`)
-//     }
-    
+//     city:'New York',
+ 
 // }
 // let person2={
-//     name:"Fatime",
+//     name:'Toy Adami',
 //     age:30,
-//     city:"New York",
+//     city:'New York',
+
+// }
+// let person3={
+//     name:'Paxlava',
+//     age:30,
+//     city:'Sheki',
+
 // }
 
-// person1.getDetails.bind(person2)()
 
-// let anotherPerson=person1.getDetails.bind(person2);
-// anotherPerson()
-
-// human.getDetails.call(person2,"Central Park","123456789","Doe")
-// human.getDetails.apply(person1,["Central Park","123456789","Doe"])
-// person.getDetails();
-// person1.getDetails();
-// person2.getDetails();
-// person1.getDetails()
-// setTimeout(person1.getDetails.bind(person1),2000)
+// human.getDetails.call(person1,'Baku','0555555555');
+// human.getDetails.call(person2,'Baku','0502111111');
+// human.getDetails.call(person3,'Baku','0777777777');
 
 
-//XMLHttpRequest - XHR
+// human.getDetails.apply(person1,['Baku','0555555555']);
+// human.getDetails.apply(person2,['Baku','0502111111']);
+// human.getDetails.apply(person3,['Baku','0777777777']);
 
-let btn=document.querySelector("#btn");
-let output=document.querySelector("#output");
+// let math={
+//     max:function(){
+//         let max=arguments[0];
+//         for(let i=1;i<arguments.length;i++){
+//             if(arguments[i]>max){
+//                 max=arguments[i];
+//             }
+//         }
+//         return max;
+//     }
+// }
 
-btn.addEventListener("click",function(){
-    
-    let xhr=new XMLHttpRequest();
-    // console.log(xhr);
-    //github users api
-    xhr.open("GET","https://api.github.com/users");
+// class Math{
+//     static max(){
+//         let max=arguments[0];
+//         for(let i=1;i<arguments.length;i++){
+//             if(arguments[i]>max){
+//                 max=arguments[i];
+//             }
+//         }
+//         return max;
+//     }
+// }
 
-    xhr.onload=function(){
-        if(this.status===200){
-            // console.log(this.responseText);
-            let users=JSON.parse(this.responseText);
-            console.log(users);
-            let outputText="";
-            users.forEach(user => {
-                outputText+=`<li>${user.login}</li>
-                <img src="${user.avatar_url}" alt="avatar" width="100px" height="100px">
-                <a href="${user.html_url}">Link</a>
-                `
-            });
-            output.innerHTML=outputText;
-        }
-    }
-    xhr.send()
-    
+// let numbers=[1,2,3,4,5,6,15,7,8,9,10];
+
+// console.log(Math.max.apply(0,numbers))
+// console.log(Math.max(1,2,3,4,5,6,7,8,9,10))
+// console.log(Math.max.apply(null,numbers))
+// console.log(math.max.apply(null,numbers))
+// console.log(Math.max.apply(null,numbers))
+// console.log(numbers.sort((a,b)=>a-b))
+
+//bind
+// const person={
+//     name:'John',
+//     age:30,
+//     city:'New York',
+//     getDetails:function(){
+//         console.log(`Name: ${this.name}, Age: ${this.age}, City: ${this.city}`)
+//     }
+// }
+
+// const person2={
+//     name:'Toy Adami',
+//     age:30,
+//     city:'New York',
+// }
+
+// person.getDetails()
+// setTimeout(person.getDetails.bind(person),5000)
+// let getDetails=person.getDetails.bind(person2)
+
+// // getDetails()
+
+// person.getDetails.bind(person2)
+
+
+//XMLHttpRequest
+
+//AJAX - Asynchronous JavaScript and XML
+
+
+// let btn=document.querySelector('#btn');
+let result=document.querySelector('#result');
+
+
+window.addEventListener('DOMContentLoaded',function(){
+    fetch("https://api.github.com/users")
+    .then(response=>response.json())
+    .then(users=>{
+        let output='';
+        users.forEach(user => {
+            output+=`
+            <div class="user-card">
+            <div class="user-card__avatar">
+                <img src="${user.avatar_url}" alt="avatar">
+            </div>
+            <div class="user-card__info">
+                <div class="user-card__name">
+                    <a href="${user.html_url}">${user.login}</a>
+                </div>
+                <div class="user-card__email">${user.type}</div>
+            </div>
+        </div>
+            `
+        });
+        result.innerHTML=output;
+    })
 })
+
+
+               
+
+
+// window.addEventListener('DOMContentLoaded',function(){
+//     let xhr=new XMLHttpRequest();
+//     //github users api
+//     xhr.open("GET","https://api.github.com/users");
+
+//     xhr.onload=function(){
+//         // console.log(this.status)
+//         if(this.status===200){
+//             // console.log(this.responseText)
+//             let users=JSON.parse(this.responseText);
+//             console.log(users)
+//             let output='';
+//             users.forEach(user => {
+//                 output+=`
+//                 <div class="user-card">
+//                 <div class="user-card__avatar">
+//                     <img src="${user.avatar_url}" alt="avatar">
+//                 </div>
+//                 <div class="user-card__info">
+//                     <div class="user-card__name">
+//                         <a href="${user.html_url}">${user.login}</a>
+//                     </div>
+//                     <div class="user-card__email">${user.type}</div>
+//                 </div>
+//             </div>
+                
+//                 `
+//             });
+//             result.innerHTML=output;
+//         }
+//     }
+
+
+//     xhr.send()
+// })
