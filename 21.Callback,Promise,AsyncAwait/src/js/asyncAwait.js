@@ -80,38 +80,41 @@
 
 
 
-// console.log(1)
+console.log(1)
 
-// setTimeout(() => {
-//     console.log(2)
-// }, 1000);
+setTimeout(() => {
+    console.log(2)
+}, 1000);
 
-// console.log(3)
+console.log(3)
 
-// setTimeout(() => {
-//     console.log(4)
-//     setTimeout(() => {
-//         console.log(5)
-//     }, 1000);
-//     new Promise((resolve, reject) => {
-//         console.log(6)
-//         resolve()
-//     }).then(() => {
-//         console.log(7)
-//     })
-// }, 0);
+setTimeout(() => {
+    console.log(4)
+    setTimeout(() => {
+        console.log(5)
+    }, 1000);
+    new Promise((resolve, reject) => {
+        console.log(6)
+        resolve()
+    }).then(() => {
+        console.log(7)
+    })
+}, 0);
 
-// new Promise((resolve, reject) => {
-//     console.log(8)
-//     resolve()
-// }).then(() => {
-//     console.log(9)
-// })
+new Promise((resolve, reject) => {
+    console.log(8)
+    resolve()
+}).then(() => {
+    console.log(9)
+})
 
-// console.log(10)
+console.log(10)
 
 
-console.log(null==0)
-console.log(null>0)
-console.log(null<=0)
+
+// 1 3 8 10 // 9 4 6 7 2 5
+
+// console.log(null==0)
+// console.log(null>0)
+// console.log(null<=0)
 
