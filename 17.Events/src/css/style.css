@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 
+input{
+  border: none;
+  outline: none;
+} */
+/* 
+.inpPass{
+  display: inline-block;
+  padding: 15px;
+  border: 2px solid red;
+}
+
+#smsInp{
+
+  width: 100%;
+  padding: 15px;
+  border: 2px solid red;
+} */
+
+body{
+
+}
+
+.board {
+  margin: auto;
+  background-color: gainsboro;
+  width: 1350px;
+  height: 300px;
+  position: relative;
+}
+
+.board .snake {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

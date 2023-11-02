@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 80%;
+  padding: 40px 0;
+  margin: 0 auto;
+}
+
+header {
+  background-color: black;
+}
+
+header .container .header-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .header-all .logo a {
+  font-size: 40px;
+  color: white;
+}
+
+header .container .header-all .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .header-all .menu ul li {
+  margin-left: 20px;
+}
+
+header .container .header-all .menu ul li a {
+  font-size: 19px;
+  font-weight: 600;
+  -webkit-transition: .7s;
+  transition: .7s;
+  position: relative;
+  color: white;
+}
+
+header .container .header-all .menu ul li a:hover::after {
+  width: 100%;
+}
+
+header .container .header-all .menu ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+/*# sourceMappingURL=style.css.map */

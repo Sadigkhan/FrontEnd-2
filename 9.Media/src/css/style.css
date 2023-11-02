@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .cards{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    width: 30%;
+}
+
+.card img{
+    width: 100%;
+}
+
+.cards .card:nth-child(3){
+    position: relative;
+
+    z-index: 1;
+}
+.cards .card:nth-child(3)::before{
+content: "";
+position: absolute;
+background-color: red;
+width: 50%;
+height: 70px;
+right: -10px;
+bottom: -10px;
+z-index: -1;
+} */
+
+
+/* a{
+    display: inline-block;
+    margin: 40px;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 40px;
+    background-color: black;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+a:before{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width: 0%;
+z-index: -1;
+background-color: red;
+transition: 1s;
+}
+
+a:after{
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+height: 100%;
+width: 0%;
+z-index: -1;
+background-color: red;
+transition: 1s;
+}
+
+a:hover::before, a:hover::after{
+    width: 50%;
+} */
+
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    /* padding: 20px 40px; */
+    width: 80%;
+    margin: auto;
+}
+
+.header-all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-all .navbar a {
+    margin-right: 20px;
+}
+
+
+.phone-header {
+    display: none;
+}
+
+
+.prods {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.prod {
+    width: 30%;
+}
+
+.prod img {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:576px) {
+    .phone-header {
+        display: block;
+    }
+
+    header {
+        display: none;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .prods .prod {
+        width: 100%;
+    }
+}
+
+@media(min-width:576px) and (max-width:768px) {
+    .phone-header {
+        display: block;
+    }
+
+    header {
+        display: none;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .prods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .prods .prod {
+        width: 45%;
+    }
+}

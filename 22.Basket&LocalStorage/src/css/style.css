@@ -1,0 +1,36 @@
+.customcard{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ececec;
+    margin: 10px 0px;
+}
+
+.image img{
+    width: 100%;
+}
+
+.content p{
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+
+.addBasket{
+    padding: 20px;
+    background-color: #f44336;
+    width: 100%;
+    border: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+.productCount, .productPrice{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
