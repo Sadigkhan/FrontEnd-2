@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
 
-export default function List({ tasks }) {
+export default function List({tasks}) {
   return (
-    <ul>
-      {tasks.map(({ title, id }) => {
-        return <li key={id}>{title}</li>;
-      })}
-    </ul>
-  );
+    
+      <ul>
+        {tasks.map(({ task, id }) => {
+          return <li key={id}>{task}</li>;
+        })}
+      </ul>
+  )
 }

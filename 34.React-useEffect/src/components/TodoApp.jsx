@@ -6,25 +6,37 @@ export default function TodoApp() {
   const [tasks, setTasks] = useState([]);
   const [dynamicId, setdynamicId] = useState(0);
 
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setTasks([...tasks, { title: todoVal, id: dynamicId }]);
-    setdynamicId(dynamicId + 1);
-    setTodoVal("");
-  };
+    if (todoVal) {
+      setTasks([...tasks, { id: dynamicId, task: todoVal }]);
+      setTodoVal("");
+      setdynamicId(dynamicId + 1);
+    }else{
+      alert("Enter your Task Rahib")
+    }
+  }
+
 
   useEffect(() => {
-    let localData = JSON.parse(localStorage.getItem("tasks"));
-    if (localData) {
-      setTasks(localData);
-      let ltsId = localData[localData.length - 1].id;
-      setdynamicId(ltsId + 1);
+    const todoList = JSON.parse(localStorage.getItem("todoList"));
+    if (todoList) {
+      setTasks(todoList);
+      setdynamicId(todoList.length);
     }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("todoList", JSON.stringify(tasks));
   }, [tasks]);
+  
+
+ 
+
+
+
+
   return (
     <>
       <form onSubmit={handleSubmit}>
